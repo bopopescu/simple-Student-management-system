@@ -1,0 +1,10 @@
+{% if student_list %}
+    <ul>
+    {% for students in student_list %}
+        <li><a href="{% url 'newapp:student_detail_list' %}">{{ Class.classes }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No claases available</p>
+{% endif %}
+

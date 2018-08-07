@@ -1,0 +1,15 @@
+{%extends "loggedin.html"%}
+{% block content %}
+<div class="w3-container" style="margin-left:380px" id="showcase">
+    <form method="POST">
+        <table>
+    {% csrf_token %}
+            <tr>
+            <td>{{ form.as_p }}<td>
+            </tr>
+        </table>
+    <button type="submit">pay </button>
+</form>
+</div>
+
+{% endblock %}

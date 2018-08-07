@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+    <center><h1>Student management System Login</h1></center>
+    <center><form name = "form" action = "{% url 'login' %}" method = "POST"  >
+
+        {% csrf_token %}
+
+         <div style = "max-width:470px;">
+         <div class="form-group">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Identifiant" name = "username" />
+            </center>
+         </div>
+         </div>
+
+         <br>
+            <div class="form-group">
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "password" style = "margin-left:20%;"
+                  placeholder = "password" name = "password" />
+            </center>
+         </div>
+            </div>
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit"
+                  value = "Login" >
+                  <strong>Login</strong>
+               </button>
+
+            </center>
+         </div>
+
+    </form></center>
+
+   </body>
+</html>
+</body>
+</html>

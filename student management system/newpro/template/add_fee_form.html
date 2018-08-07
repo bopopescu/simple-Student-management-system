@@ -1,0 +1,20 @@
+
+{%extends "loggedin.html"%}
+
+{% block content %}
+
+ <div class="w3-container" style="margin-left:260px" id="showcase">
+<form method="post">
+{%csrf_token%}
+
+
+    {% for field in formfee %}
+        <a><strong>{{field.label}}</strong></a>
+        {{field}}
+    {% endfor %}
+
+
+<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span> save </button>
+</form>
+ </div>
+{% endblock %}

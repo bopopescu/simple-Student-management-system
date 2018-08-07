@@ -1,0 +1,41 @@
+{% extends "loggedin.html" %}
+{% block content %}
+<div class="w3-container" style="margin-left:260px" id="showcase">
+<h1>{{clas.classes}}</h1>
+<table class="table table-hover">
+
+    <tr>
+        <th>student_name</th>
+        <th>gender</th>
+        <th>age</th>
+    </tr>
+    {% for i in clas %}
+    <tr>
+        <td><a href="{% url 'newapp:student' pk=i.pk %}">{{i.name}}</a></td>
+        <td>{{i.gender}}</td>
+        <td>{{i.age}}</td>
+
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>total Students</th>
+            <th>girls</th>
+            <th>boys</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>{{tot}}</td>
+            <td>{{girls}}</td>
+            <td>{{boys}}</td>
+
+        </tr>
+    </table>
+
+</div>
+{% endblock %}

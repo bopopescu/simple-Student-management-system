@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Management System</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+</style>
+
+<body>
+ <!-- Header -->
+
+  <div class="w3-container" style="margin-left:380px" id="showcase">
+    <h1 class="w3-jumbo"><b>School Management System</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:250px;font-weight:bold;" id="mySidebar"><br>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>ABC<br>SCHOOL</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="{% url 'newapp:loggedin' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-home"></span> Home</a>
+    <a href="{% url 'newapp:standard_list' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-th-large"></span> Standard</a>
+    <a href="{% url 'newapp:div_list' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-th"></span> Division</a>
+    <a href="{% url 'newapp:class_list' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-text-background"></span> Class</a>
+    <a href="{% url 'newapp:add_student' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-user"></span>  Allocate Student</a>
+      <a href="{% url 'newapp:student_details' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-user"></span> Student detail</a>
+      <a href="{% url 'newapp:add_fee' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-usd"></span> Fee </a>
+       <a href="{% url 'newapp:fee_list' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-align-justify"></span> Fee list </a>
+      <a href="{% url 'logout' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="text-decoration:none"><span class="glyphicon glyphicon-log-out"></span> logout</a>
+
+
+
+
+  </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+<br>
+<br>
+<div class="footer">
+  <p>sennaaa!!!!!!!!!!!</p>
+</div>
+
+</body>
+</html>

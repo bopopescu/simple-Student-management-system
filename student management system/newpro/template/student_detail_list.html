@@ -1,0 +1,30 @@
+{% extends "loggedin.html" %}
+{% block content %}
+<div class="w3-container" style="margin-left:260px" id="showcase">
+    <a href="{% url 'newapp:add_student' %}">Add <span class="glyphicon glyphicon-plus"></span></a>
+<table class="table table-hover">
+    <thead>
+    <th>
+        Class
+    </th>
+    <th>Student Name</th>
+    <th>Tuition fee</th>
+    <th>Mess Fee</th>
+    <th>Bus Fee</th>
+    <th>Hostel Fee</th>
+    </thead>
+    <tbody>
+    {% for stud in studs %}
+    <tr>
+        <td>{{stud.classes}}</td>
+        <td><a href="{% url 'newapp:student' pk=stud.pk %}">{{stud.name}}</a></td>
+        <td>{{stud.tuition_fee}}</td>
+        <td>{{stud.mess_fee}}</td>
+        <td>{{stud.bus_fee}}</td>
+        <td>{{stud.hostel_fee}}</td>
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+{% endblock %}

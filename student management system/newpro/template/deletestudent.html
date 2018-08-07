@@ -1,0 +1,12 @@
+
+{%extends "loggedin.html"%}
+{% block content %}
+ <div class="w3-container" style="margin-left:260px" id="showcase">
+<form method="post">
+    {% csrf_token %}
+    Are you sure you want to delete: <b>{{ object }}</b>  ?
+    <input type="submit" value="Submit" />
+</form>
+
+ </div>
+{% endblock %}
