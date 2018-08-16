@@ -8,13 +8,13 @@
 {%csrf_token%}
 
 
-    {% for field in formfee %}
-        <a><strong>{{field.label}}</strong></a>
-        {{field}}
+    {% for fee in formfee %}
+        <a><strong><br><br>{{fee.label}}</strong></a>
+        {{fee}}
     {% endfor %}
 
 
-<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span> save </button>
+<button type="submit"><span class="glyphicon glyphicon-floppy-disk"></span></button>
 </form>
  </div>
 {% endblock %}
